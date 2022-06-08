@@ -1,0 +1,1946 @@
+{
+  "namespace": "ds.api.cards",
+  "definitions": {
+    "ds.api.cards.DS01": {
+      "kind": "entity",
+      "elements": {
+        "qcode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 5
+        },
+        "cost1": {
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 10
+        },
+        "curr1": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "cost2": {
+          "type": "cds.Integer64"
+        },
+        "curr2": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "date1": {
+          "type": "cds.Date"
+        }
+      }
+    },
+    "ds.api.cards.DS02": {
+      "kind": "entity",
+      "elements": {
+        "fclt_id": {
+          "key": true,
+          "type": "cds.String",
+          "length": 6
+        },
+        "asst_no": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "asst_type1": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "asst_type2": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "qcode": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "mst_code": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "asst_status": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "fclt_area": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "model": {
+          "type": "cds.String",
+          "length": 2
+        },
+        "serial_no": {
+          "type": "cds.String",
+          "length": 5
+        }
+      }
+    },
+    "ds.api.cards.DS03": {
+      "kind": "entity",
+      "elements": {
+        "fclt_id": {
+          "key": true,
+          "type": "cds.String",
+          "length": 6
+        },
+        "mst_code": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "qcode": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "fclt_status": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "ams_status": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "rgst_type": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "install_stdt": {
+          "type": "cds.Date"
+        },
+        "install_schd_eddt": {
+          "type": "cds.Date"
+        },
+        "install_eddt": {
+          "type": "cds.Date"
+        },
+        "dmsh_stdt": {
+          "type": "cds.Date"
+        },
+        "dmsh_schd_eddt": {
+          "type": "cds.Date"
+        },
+        "dmsh_eddt": {
+          "type": "cds.Date"
+        },
+        "asst_div": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "use_org": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "lfcycl_mng_org": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "lfcycl_mngr": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "inout_div": {
+          "type": "cds.String",
+          "length": 8
+        },
+        "district": {
+          "type": "cds.String",
+          "length": 12
+        },
+        "building": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "floor": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "line": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "bay": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "site": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "gbm": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "gain_dt": {
+          "type": "cds.Date"
+        }
+      }
+    },
+    "ds.api.cards.DS04": {
+      "kind": "entity",
+      "elements": {
+        "fclt_id": {
+          "key": true,
+          "type": "cds.String",
+          "length": 6
+        },
+        "eam_status": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "ams_status": {
+          "type": "cds.String",
+          "length": 6
+        }
+      }
+    },
+    "ds.api.cards.DS05": {
+      "kind": "entity",
+      "elements": {
+        "zfrdt": {
+          "type": "cds.Date"
+        },
+        "ztodt": {
+          "type": "cds.Date"
+        },
+        "bname": {
+          "type": "cds.String",
+          "length": 15
+        },
+        "zseq": {
+          "type": "cds.Integer"
+        },
+        "ztype": {
+          "type": "cds.String",
+          "length": 1
+        },
+        "tcode": {
+          "type": "cds.String",
+          "length": 30
+        },
+        "nerp_tcode_nm": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "percentile": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "batdt": {
+          "type": "cds.Date"
+        },
+        "zpgmtype": {
+          "type": "cds.String",
+          "length": 2
+        },
+        "intent": {
+          "type": "cds.String",
+          "length": 30
+        },
+        "url": {
+          "type": "cds.String",
+          "length": 200
+        },
+        "icon": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "sysalias_tgt": {
+          "type": "cds.String",
+          "length": 5
+        }
+      }
+    },
+    "DSOdataService": {
+      "@source": "srv/card-service.cds",
+      "kind": "service"
+    },
+    "DSOdataService.DS_01": {
+      "kind": "entity",
+      "projection": {
+        "from": {
+          "ref": [
+            "ds.api.cards.DS01"
+          ]
+        }
+      },
+      "elements": {
+        "qcode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 5
+        },
+        "cost1": {
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 10
+        },
+        "curr1": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "cost2": {
+          "type": "cds.Integer64"
+        },
+        "curr2": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "date1": {
+          "type": "cds.Date"
+        }
+      }
+    },
+    "DSOdataService.DS_02": {
+      "kind": "entity",
+      "projection": {
+        "from": {
+          "ref": [
+            "ds.api.cards.DS02"
+          ]
+        }
+      },
+      "elements": {
+        "fclt_id": {
+          "key": true,
+          "type": "cds.String",
+          "length": 6
+        },
+        "asst_no": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "asst_type1": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "asst_type2": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "qcode": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "mst_code": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "asst_status": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "fclt_area": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "model": {
+          "type": "cds.String",
+          "length": 2
+        },
+        "serial_no": {
+          "type": "cds.String",
+          "length": 5
+        }
+      }
+    },
+    "DSOdataService.DS_03": {
+      "kind": "entity",
+      "projection": {
+        "from": {
+          "ref": [
+            "ds.api.cards.DS03"
+          ]
+        }
+      },
+      "elements": {
+        "fclt_id": {
+          "key": true,
+          "type": "cds.String",
+          "length": 6
+        },
+        "mst_code": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "qcode": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "fclt_status": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "ams_status": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "rgst_type": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "install_stdt": {
+          "type": "cds.Date"
+        },
+        "install_schd_eddt": {
+          "type": "cds.Date"
+        },
+        "install_eddt": {
+          "type": "cds.Date"
+        },
+        "dmsh_stdt": {
+          "type": "cds.Date"
+        },
+        "dmsh_schd_eddt": {
+          "type": "cds.Date"
+        },
+        "dmsh_eddt": {
+          "type": "cds.Date"
+        },
+        "asst_div": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "use_org": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "lfcycl_mng_org": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "lfcycl_mngr": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "inout_div": {
+          "type": "cds.String",
+          "length": 8
+        },
+        "district": {
+          "type": "cds.String",
+          "length": 12
+        },
+        "building": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "floor": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "line": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "bay": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "site": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "gbm": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "gain_dt": {
+          "type": "cds.Date"
+        }
+      }
+    },
+    "DSOdataService.DS_04": {
+      "kind": "entity",
+      "projection": {
+        "from": {
+          "ref": [
+            "ds.api.cards.DS04"
+          ]
+        }
+      },
+      "elements": {
+        "fclt_id": {
+          "key": true,
+          "type": "cds.String",
+          "length": 6
+        },
+        "eam_status": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "ams_status": {
+          "type": "cds.String",
+          "length": 6
+        }
+      }
+    },
+    "DSOdataService.DS_05": {
+      "kind": "entity",
+      "projection": {
+        "from": {
+          "ref": [
+            "ds.api.cards.DS05"
+          ]
+        }
+      },
+      "elements": {
+        "zfrdt": {
+          "type": "cds.Date"
+        },
+        "ztodt": {
+          "type": "cds.Date"
+        },
+        "bname": {
+          "type": "cds.String",
+          "length": 15
+        },
+        "zseq": {
+          "type": "cds.Integer"
+        },
+        "ztype": {
+          "type": "cds.String",
+          "length": 1
+        },
+        "tcode": {
+          "type": "cds.String",
+          "length": 30
+        },
+        "nerp_tcode_nm": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "percentile": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "batdt": {
+          "type": "cds.Date"
+        },
+        "zpgmtype": {
+          "type": "cds.String",
+          "length": 2
+        },
+        "intent": {
+          "type": "cds.String",
+          "length": 30
+        },
+        "url": {
+          "type": "cds.String",
+          "length": 200
+        },
+        "icon": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "sysalias_tgt": {
+          "type": "cds.String",
+          "length": 5
+        }
+      }
+    },
+    "DSOdataService.card01": {
+      "kind": "entity",
+      "query": {
+        "SELECT": {
+          "from": {
+            "join": "inner",
+            "args": [
+              {
+                "ref": [
+                  "ds.api.cards.DS02"
+                ],
+                "as": "a"
+              },
+              {
+                "ref": [
+                  "ds.api.cards.DS01"
+                ],
+                "as": "b"
+              }
+            ],
+            "on": [
+              {
+                "ref": [
+                  "a",
+                  "qcode"
+                ]
+              },
+              "=",
+              {
+                "ref": [
+                  "b",
+                  "qcode"
+                ]
+              }
+            ]
+          },
+          "columns": [
+            {
+              "ref": [
+                "a",
+                "asst_type2"
+              ]
+            },
+            {
+              "func": "sum",
+              "args": [
+                {
+                  "ref": [
+                    "b",
+                    "cost1"
+                  ]
+                }
+              ],
+              "as": "cost1",
+              "cast": {
+                "type": "cds.Integer64"
+              }
+            },
+            {
+              "func": "sum",
+              "args": [
+                {
+                  "ref": [
+                    "b",
+                    "cost2"
+                  ]
+                }
+              ],
+              "as": "cost2",
+              "cast": {
+                "type": "cds.Integer64"
+              }
+            },
+            {
+              "func": "count",
+              "args": [
+                "*"
+              ],
+              "as": "cnt",
+              "cast": {
+                "type": "cds.Integer"
+              }
+            }
+          ],
+          "groupBy": [
+            {
+              "ref": [
+                "a",
+                "asst_type2"
+              ]
+            }
+          ]
+        }
+      },
+      "elements": {
+        "asst_type2": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "cost1": {
+          "@Core.Computed": true,
+          "type": "cds.Integer64"
+        },
+        "cost2": {
+          "@Core.Computed": true,
+          "type": "cds.Integer64"
+        },
+        "cnt": {
+          "@Core.Computed": true,
+          "type": "cds.Integer"
+        }
+      }
+    },
+    "DSOdataService.card02_01": {
+      "kind": "entity",
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "ds.api.cards.DS03"
+            ],
+            "as": "a"
+          },
+          "columns": [
+            {
+              "ref": [
+                "a",
+                "line"
+              ]
+            },
+            {
+              "func": "round",
+              "args": [
+                {
+                  "func": "avg",
+                  "args": [
+                    {
+                      "func": "days_between",
+                      "args": [
+                        {
+                          "ref": [
+                            "a",
+                            "install_stdt"
+                          ]
+                        },
+                        {
+                          "ref": [
+                            "a",
+                            "install_schd_eddt"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "val": 1
+                }
+              ],
+              "as": "line_lt_days",
+              "cast": {
+                "type": "cds.Decimal",
+                "precision": 10,
+                "scale": 10
+              }
+            }
+          ],
+          "groupBy": [
+            {
+              "ref": [
+                "a",
+                "line"
+              ]
+            }
+          ]
+        }
+      },
+      "elements": {
+        "line": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "line_lt_days": {
+          "@Core.Computed": true,
+          "type": "cds.Decimal",
+          "precision": 10,
+          "scale": 10
+        }
+      }
+    },
+    "DSOdataService.card02_02": {
+      "kind": "entity",
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "ds.api.cards.DS03"
+            ],
+            "as": "a"
+          },
+          "columns": [
+            {
+              "ref": [
+                "a",
+                "gbm"
+              ]
+            },
+            {
+              "func": "round",
+              "args": [
+                {
+                  "func": "avg",
+                  "args": [
+                    {
+                      "func": "days_between",
+                      "args": [
+                        {
+                          "ref": [
+                            "a",
+                            "install_stdt"
+                          ]
+                        },
+                        {
+                          "ref": [
+                            "a",
+                            "install_schd_eddt"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "val": 1
+                }
+              ],
+              "as": "gbm_lt_days",
+              "cast": {
+                "type": "cds.Decimal",
+                "precision": 10,
+                "scale": 10
+              }
+            }
+          ],
+          "groupBy": [
+            {
+              "ref": [
+                "a",
+                "gbm"
+              ]
+            }
+          ]
+        }
+      },
+      "elements": {
+        "gbm": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "gbm_lt_days": {
+          "@Core.Computed": true,
+          "type": "cds.Decimal",
+          "precision": 10,
+          "scale": 10
+        }
+      }
+    },
+    "DSOdataService.card02_03": {
+      "kind": "entity",
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "ds.api.cards.DS03"
+            ],
+            "as": "a"
+          },
+          "columns": [
+            {
+              "ref": [
+                "a",
+                "site"
+              ]
+            },
+            {
+              "func": "round",
+              "args": [
+                {
+                  "func": "avg",
+                  "args": [
+                    {
+                      "func": "days_between",
+                      "args": [
+                        {
+                          "ref": [
+                            "a",
+                            "install_stdt"
+                          ]
+                        },
+                        {
+                          "ref": [
+                            "a",
+                            "install_schd_eddt"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "val": 1
+                }
+              ],
+              "as": "site_lt_days",
+              "cast": {
+                "type": "cds.Decimal",
+                "precision": 10,
+                "scale": 10
+              }
+            }
+          ],
+          "groupBy": [
+            {
+              "ref": [
+                "a",
+                "site"
+              ]
+            }
+          ]
+        }
+      },
+      "elements": {
+        "site": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "site_lt_days": {
+          "@Core.Computed": true,
+          "type": "cds.Decimal",
+          "precision": 10,
+          "scale": 10
+        }
+      }
+    },
+    "DSOdataService.card02_04": {
+      "kind": "entity",
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "ds.api.cards.DS03"
+            ],
+            "as": "a"
+          },
+          "columns": [
+            {
+              "ref": [
+                "a",
+                "use_org"
+              ]
+            },
+            {
+              "func": "round",
+              "args": [
+                {
+                  "func": "avg",
+                  "args": [
+                    {
+                      "func": "days_between",
+                      "args": [
+                        {
+                          "ref": [
+                            "a",
+                            "install_stdt"
+                          ]
+                        },
+                        {
+                          "ref": [
+                            "a",
+                            "install_schd_eddt"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "val": 1
+                }
+              ],
+              "as": "org_lt_days",
+              "cast": {
+                "type": "cds.Decimal",
+                "precision": 10,
+                "scale": 10
+              }
+            }
+          ],
+          "groupBy": [
+            {
+              "ref": [
+                "a",
+                "use_org"
+              ]
+            }
+          ]
+        }
+      },
+      "elements": {
+        "use_org": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "org_lt_days": {
+          "@Core.Computed": true,
+          "type": "cds.Decimal",
+          "precision": 10,
+          "scale": 10
+        }
+      }
+    },
+    "DSOdataService.card03": {
+      "kind": "entity",
+      "query": {
+        "SELECT": {
+          "from": {
+            "join": "inner",
+            "args": [
+              {
+                "join": "inner",
+                "args": [
+                  {
+                    "ref": [
+                      "ds.api.cards.DS02"
+                    ],
+                    "as": "a"
+                  },
+                  {
+                    "ref": [
+                      "ds.api.cards.DS03"
+                    ],
+                    "as": "b"
+                  }
+                ],
+                "on": [
+                  {
+                    "ref": [
+                      "a",
+                      "fclt_id"
+                    ]
+                  },
+                  "=",
+                  {
+                    "ref": [
+                      "b",
+                      "fclt_id"
+                    ]
+                  }
+                ]
+              },
+              {
+                "ref": [
+                  "ds.api.cards.DS04"
+                ],
+                "as": "c"
+              }
+            ],
+            "on": [
+              {
+                "ref": [
+                  "b",
+                  "fclt_id"
+                ]
+              },
+              "=",
+              {
+                "ref": [
+                  "c",
+                  "fclt_id"
+                ]
+              }
+            ]
+          },
+          "columns": [
+            {
+              "ref": [
+                "a",
+                "fclt_id"
+              ]
+            },
+            {
+              "ref": [
+                "a",
+                "asst_type1"
+              ]
+            },
+            {
+              "ref": [
+                "a",
+                "asst_type2"
+              ]
+            },
+            {
+              "ref": [
+                "a",
+                "asst_status"
+              ]
+            },
+            {
+              "ref": [
+                "a",
+                "fclt_area"
+              ]
+            },
+            {
+              "ref": [
+                "a",
+                "model"
+              ]
+            },
+            {
+              "ref": [
+                "b",
+                "use_org"
+              ]
+            },
+            {
+              "ref": [
+                "b",
+                "lfcycl_mng_org"
+              ]
+            },
+            {
+              "ref": [
+                "b",
+                "building"
+              ]
+            },
+            {
+              "ref": [
+                "b",
+                "line"
+              ]
+            },
+            {
+              "ref": [
+                "b",
+                "floor"
+              ]
+            },
+            {
+              "ref": [
+                "c",
+                "eam_status"
+              ]
+            },
+            {
+              "func": "days_between",
+              "args": [
+                {
+                  "ref": [
+                    "b",
+                    "install_stdt"
+                  ]
+                },
+                {
+                  "ref": [
+                    "b",
+                    "install_schd_eddt"
+                  ]
+                }
+              ],
+              "as": "end_days",
+              "cast": {
+                "type": "cds.Integer"
+              }
+            },
+            {
+              "func": "days_between",
+              "args": [
+                {
+                  "ref": [
+                    "b",
+                    "install_stdt"
+                  ]
+                },
+                {
+                  "func": "CURRENT_DATE"
+                }
+              ],
+              "as": "current_days",
+              "cast": {
+                "type": "cds.Integer"
+              }
+            },
+            {
+              "func": "round",
+              "args": [
+                {
+                  "xpr": [
+                    {
+                      "xpr": [
+                        {
+                          "func": "days_between",
+                          "args": [
+                            {
+                              "ref": [
+                                "b",
+                                "install_stdt"
+                              ]
+                            },
+                            {
+                              "func": "CURRENT_DATE"
+                            }
+                          ]
+                        },
+                        "/",
+                        {
+                          "func": "days_between",
+                          "args": [
+                            {
+                              "ref": [
+                                "b",
+                                "install_stdt"
+                              ]
+                            },
+                            {
+                              "ref": [
+                                "b",
+                                "install_schd_eddt"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    "*",
+                    {
+                      "val": 100
+                    }
+                  ]
+                },
+                {
+                  "val": 1
+                }
+              ],
+              "as": "current_rate",
+              "cast": {
+                "type": "cds.Decimal",
+                "precision": 3,
+                "scale": 2
+              }
+            }
+          ]
+        }
+      },
+      "elements": {
+        "fclt_id": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "asst_type1": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "asst_type2": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "asst_status": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "fclt_area": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "model": {
+          "type": "cds.String",
+          "length": 2
+        },
+        "use_org": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "lfcycl_mng_org": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "building": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "line": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "floor": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "eam_status": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "end_days": {
+          "@Core.Computed": true,
+          "type": "cds.Integer"
+        },
+        "current_days": {
+          "@Core.Computed": true,
+          "type": "cds.Integer"
+        },
+        "current_rate": {
+          "@Core.Computed": true,
+          "type": "cds.Decimal",
+          "precision": 3,
+          "scale": 2
+        }
+      }
+    },
+    "DSOdataService.card04": {
+      "kind": "entity",
+      "query": {
+        "SELECT": {
+          "from": {
+            "SET": {
+              "op": "minus",
+              "args": [
+                {
+                  "SELECT": {
+                    "from": {
+                      "ref": [
+                        "ds.api.cards.DS04"
+                      ],
+                      "as": "b"
+                    },
+                    "columns": [
+                      {
+                        "ref": [
+                          "fclt_id"
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "SELECT": {
+                    "from": {
+                      "ref": [
+                        "ds.api.cards.DS04"
+                      ],
+                      "as": "a"
+                    },
+                    "columns": [
+                      {
+                        "ref": [
+                          "fclt_id"
+                        ]
+                      }
+                    ],
+                    "where": [
+                      {
+                        "xpr": [
+                          {
+                            "xpr": [
+                              {
+                                "ref": [
+                                  "a",
+                                  "eam_status"
+                                ]
+                              },
+                              "=",
+                              {
+                                "val": "설치완료"
+                              },
+                              "or",
+                              {
+                                "ref": [
+                                  "a",
+                                  "eam_status"
+                                ]
+                              },
+                              "=",
+                              {
+                                "val": "철거요청"
+                              }
+                            ]
+                          },
+                          "and",
+                          {
+                            "ref": [
+                              "a",
+                              "ams_status"
+                            ]
+                          },
+                          "=",
+                          {
+                            "val": "사용"
+                          }
+                        ]
+                      },
+                      "or",
+                      {
+                        "xpr": [
+                          {
+                            "xpr": [
+                              {
+                                "ref": [
+                                  "a",
+                                  "eam_status"
+                                ]
+                              },
+                              "=",
+                              {
+                                "val": "미설치"
+                              },
+                              "or",
+                              {
+                                "ref": [
+                                  "a",
+                                  "eam_status"
+                                ]
+                              },
+                              "=",
+                              {
+                                "val": "설치요청"
+                              },
+                              "or",
+                              {
+                                "ref": [
+                                  "a",
+                                  "eam_status"
+                                ]
+                              },
+                              "=",
+                              {
+                                "val": "철거진행중"
+                              }
+                            ]
+                          },
+                          "and",
+                          {
+                            "ref": [
+                              "a",
+                              "ams_status"
+                            ]
+                          },
+                          "=",
+                          {
+                            "val": "미사용"
+                          }
+                        ]
+                      },
+                      "or",
+                      {
+                        "xpr": [
+                          {
+                            "ref": [
+                              "a",
+                              "eam_status"
+                            ]
+                          },
+                          "=",
+                          {
+                            "val": "폐기"
+                          },
+                          "and",
+                          {
+                            "ref": [
+                              "a",
+                              "ams_status"
+                            ]
+                          },
+                          "=",
+                          {
+                            "val": "철거완료"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "as": "z"
+          },
+          "columns": [
+            {
+              "func": "count",
+              "args": [
+                "*"
+              ],
+              "as": "cnt",
+              "cast": {
+                "type": "cds.Integer"
+              }
+            }
+          ]
+        }
+      },
+      "elements": {
+        "cnt": {
+          "@Core.Computed": true,
+          "type": "cds.Integer"
+        }
+      }
+    },
+    "DSOdataService.card_detail": {
+      "kind": "entity",
+      "query": {
+        "SELECT": {
+          "from": {
+            "join": "inner",
+            "args": [
+              {
+                "join": "inner",
+                "args": [
+                  {
+                    "join": "inner",
+                    "args": [
+                      {
+                        "ref": [
+                          "ds.api.cards.DS01"
+                        ],
+                        "as": "a"
+                      },
+                      {
+                        "ref": [
+                          "ds.api.cards.DS02"
+                        ],
+                        "as": "b"
+                      }
+                    ],
+                    "on": [
+                      {
+                        "ref": [
+                          "a",
+                          "qcode"
+                        ]
+                      },
+                      "=",
+                      {
+                        "ref": [
+                          "b",
+                          "qcode"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "ref": [
+                      "ds.api.cards.DS03"
+                    ],
+                    "as": "c"
+                  }
+                ],
+                "on": [
+                  {
+                    "ref": [
+                      "b",
+                      "fclt_id"
+                    ]
+                  },
+                  "=",
+                  {
+                    "ref": [
+                      "c",
+                      "fclt_id"
+                    ]
+                  }
+                ]
+              },
+              {
+                "ref": [
+                  "ds.api.cards.DS04"
+                ],
+                "as": "d"
+              }
+            ],
+            "on": [
+              {
+                "ref": [
+                  "c",
+                  "fclt_id"
+                ]
+              },
+              "=",
+              {
+                "ref": [
+                  "d",
+                  "fclt_id"
+                ]
+              }
+            ]
+          },
+          "columns": [
+            {
+              "ref": [
+                "b",
+                "fclt_id"
+              ]
+            },
+            {
+              "ref": [
+                "b",
+                "qcode"
+              ]
+            },
+            {
+              "ref": [
+                "a",
+                "cost1"
+              ]
+            },
+            {
+              "ref": [
+                "a",
+                "curr1"
+              ]
+            },
+            {
+              "ref": [
+                "a",
+                "cost2"
+              ]
+            },
+            {
+              "ref": [
+                "a",
+                "curr2"
+              ]
+            },
+            {
+              "ref": [
+                "a",
+                "date1"
+              ]
+            },
+            {
+              "ref": [
+                "b",
+                "asst_no"
+              ]
+            },
+            {
+              "ref": [
+                "b",
+                "asst_type1"
+              ]
+            },
+            {
+              "ref": [
+                "b",
+                "asst_type2"
+              ]
+            },
+            {
+              "ref": [
+                "b",
+                "mst_code"
+              ],
+              "as": "ds02_mst_code"
+            },
+            {
+              "ref": [
+                "b",
+                "asst_status"
+              ]
+            },
+            {
+              "ref": [
+                "b",
+                "fclt_area"
+              ]
+            },
+            {
+              "ref": [
+                "b",
+                "model"
+              ]
+            },
+            {
+              "ref": [
+                "b",
+                "serial_no"
+              ]
+            },
+            {
+              "ref": [
+                "c",
+                "mst_code"
+              ],
+              "as": "ds03_mst_code"
+            },
+            {
+              "ref": [
+                "c",
+                "fclt_status"
+              ]
+            },
+            {
+              "ref": [
+                "c",
+                "ams_status"
+              ],
+              "as": "ds03_ams_status"
+            },
+            {
+              "ref": [
+                "c",
+                "rgst_type"
+              ]
+            },
+            {
+              "ref": [
+                "c",
+                "install_stdt"
+              ]
+            },
+            {
+              "ref": [
+                "c",
+                "install_schd_eddt"
+              ]
+            },
+            {
+              "ref": [
+                "c",
+                "install_eddt"
+              ]
+            },
+            {
+              "ref": [
+                "c",
+                "dmsh_stdt"
+              ]
+            },
+            {
+              "ref": [
+                "c",
+                "dmsh_schd_eddt"
+              ]
+            },
+            {
+              "ref": [
+                "c",
+                "dmsh_eddt"
+              ]
+            },
+            {
+              "ref": [
+                "c",
+                "asst_div"
+              ]
+            },
+            {
+              "ref": [
+                "c",
+                "use_org"
+              ]
+            },
+            {
+              "ref": [
+                "c",
+                "lfcycl_mng_org"
+              ]
+            },
+            {
+              "ref": [
+                "c",
+                "lfcycl_mngr"
+              ]
+            },
+            {
+              "ref": [
+                "c",
+                "inout_div"
+              ]
+            },
+            {
+              "ref": [
+                "c",
+                "district"
+              ]
+            },
+            {
+              "ref": [
+                "c",
+                "building"
+              ]
+            },
+            {
+              "ref": [
+                "c",
+                "floor"
+              ]
+            },
+            {
+              "ref": [
+                "c",
+                "line"
+              ]
+            },
+            {
+              "ref": [
+                "c",
+                "bay"
+              ]
+            },
+            {
+              "ref": [
+                "c",
+                "site"
+              ]
+            },
+            {
+              "ref": [
+                "c",
+                "gbm"
+              ]
+            },
+            {
+              "ref": [
+                "c",
+                "gain_dt"
+              ]
+            },
+            {
+              "ref": [
+                "d",
+                "eam_status"
+              ]
+            },
+            {
+              "ref": [
+                "d",
+                "ams_status"
+              ],
+              "as": "ds04_ams_status"
+            }
+          ]
+        }
+      },
+      "elements": {
+        "fclt_id": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "qcode": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "cost1": {
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 10
+        },
+        "curr1": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "cost2": {
+          "type": "cds.Integer64"
+        },
+        "curr2": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "date1": {
+          "type": "cds.Date"
+        },
+        "asst_no": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "asst_type1": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "asst_type2": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "ds02_mst_code": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "asst_status": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "fclt_area": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "model": {
+          "type": "cds.String",
+          "length": 2
+        },
+        "serial_no": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "ds03_mst_code": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "fclt_status": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "ds03_ams_status": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "rgst_type": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "install_stdt": {
+          "type": "cds.Date"
+        },
+        "install_schd_eddt": {
+          "type": "cds.Date"
+        },
+        "install_eddt": {
+          "type": "cds.Date"
+        },
+        "dmsh_stdt": {
+          "type": "cds.Date"
+        },
+        "dmsh_schd_eddt": {
+          "type": "cds.Date"
+        },
+        "dmsh_eddt": {
+          "type": "cds.Date"
+        },
+        "asst_div": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "use_org": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "lfcycl_mng_org": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "lfcycl_mngr": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "inout_div": {
+          "type": "cds.String",
+          "length": 8
+        },
+        "district": {
+          "type": "cds.String",
+          "length": 12
+        },
+        "building": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "floor": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "line": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "bay": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "site": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "gbm": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "gain_dt": {
+          "type": "cds.Date"
+        },
+        "eam_status": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "ds04_ams_status": {
+          "type": "cds.String",
+          "length": 6
+        }
+      }
+    }
+  },
+  "meta": {
+    "creator": "CDS Compiler v2.15.2",
+    "flavor": "inferred"
+  },
+  "$version": "2.0"
+}
