@@ -30,6 +30,9 @@ entity DS01 {
     S/N
  */
 entity DS02 {
+    /**
+    설비ID
+     */
     key fclt_id : String(6);
     asst_no	: String(5);
     asst_type1 : String(10);
