@@ -6,6 +6,7 @@ service DSOdataService {
     entity DS_03 as projection on dsentity.DS03;
     entity DS_04 as projection on dsentity.DS04;
     entity DS_05 as projection on dsentity.DS05;
+    entity DS_06 as projection on dsentity.DS06;
 
     entity card01 as 
     select a.asst_type2 /* 자산유형1 */
@@ -79,6 +80,7 @@ service DSOdataService {
     EAM 상태 = 철거 완료 
     */
     select count(*) as cnt : Integer
+         , (select count(*) as tCnt from dsentity.DS04) as totalCnt : Integer
       from ( select fclt_id
                from dsentity.DS04 as b
               minus
@@ -91,7 +93,113 @@ service DSOdataService {
     ;
 
     entity card_detail as
-    select b.fclt_id
+    
+select key b.fclt_id  @(title : '설비ID')
+         , b.qcode @(title : 'Q코드')
+         , a.cost1 @(title : '취득가')
+         , a.curr1 @(title : '취득가단위')
+         , a.cost2 @(title : '장부가')
+         , a.curr2 @(title : '장부가단위')
+         , a.date1 @(title : 'App일자')
+         , b.asst_no @(title : '자산번호')
+         , b.asst_type1 @(title : '자산유형0')
+         , b.asst_type2 @(title : '자산유형1')
+         , b.mst_code as ds02_mst_code @(title : '마스터코드')
+         , b.asst_status @(title : '자산상태')
+         , b.fclt_area @(title : '설비Area')
+         , b.model @(title : 'Model')
+         , b.serial_no @(title : '시리얼번호')
+         , c.mst_code as ds03_mst_code @(title : '마스터코드')
+         , c.fclt_status @(title : '설비상태')
+         , c.ams_status as ds03_ams_status @(title : 'AMS상태')
+         , c.rgst_type @(title : '등록유형')
+         , c.install_stdt @(title : '설치시작일')
+         , c.install_schd_eddt @(title : '설치예정시작일')
+         , c.install_eddt @(title : '설치종료일')
+         , c.dmsh_stdt @(title : '철거시작일')
+         , c.dmsh_schd_eddt @(title : '철거시작예정일')
+         , c.dmsh_eddt @(title : '철거종료일')
+         , c.asst_div @(title : '자산구분')
+         , c.use_org @(title : '사용부서')
+         , c.lfcycl_mng_org @(title : '생애관리부서')
+         , c.lfcycl_mngr @(title : '생애관리자')
+         , c.inout_div @(title : '사내외구분')
+         , c.district @(title : 'District')
+         , c.building @(title : 'Building')
+         , c.floor @(title : 'Floor')
+         , c.line @(title : 'Line')
+         , c.bay @(title : 'Bay')
+         , c.site @(title : 'Site')
+         , c.gbm @(title : '사업부')
+         , c.gain_dt @(title : '취득일자')
+         , d.eam_status @(title : 'EAM상태')
+         , d.ams_status as ds04_ams_status @(title : 'AMS상태')
+         , case when ((d.eam_status = '설치완료' or d.eam_status = '철거요청') and d.ams_status = '사용')
+                  or ((d.eam_status = '미설치' or d.eam_status = '설치요청' or d.eam_status = '철거진행중') and d.ams_status = '미사용')
+                  or (d.eam_status = '폐기' and d.ams_status = '철거완료') then 'N' else 'Y' end as issue_status : String(1) @(title : '상태이상')
+      from dsentity.DS01 as a
+      join dsentity.DS02 as b
+        on a.qcode = b.qcode
+      join dsentity.DS03 as c
+        on b.fclt_id = c.fclt_id
+      join dsentity.DS04 as d
+        on c.fclt_id = d.fclt_id
+    }
+    ;
+/* Deatail Query */
+
+/**
+
+select key b.fclt_id  @(title : '설비ID')
+         , b.qcode @(title : 'Q코드')
+         , a.cost1 @(title : '취득가')
+         , a.curr1 @(title : '취득가단위')
+         , a.cost2 @(title : '장부가')
+         , a.curr2 @(title : '장부가단위')
+         , a.date1 @(title : 'App일자')
+         , b.asst_no @(title : '자산번호')
+         , b.asst_type1 @(title : '자산유형0')
+         , b.asst_type2 @(title : '자산유형1')
+         , b.mst_code as ds02_mst_code @(title : '마스터코드')
+         , b.asst_status @(title : '자산상태')
+         , b.fclt_area @(title : '설비Area')
+         , b.model @(title : 'Model')
+         , b.serial_no @(title : '시리얼번호')
+         , c.mst_code as ds03_mst_code @(title : '마스터코드')
+         , c.fclt_status @(title : '설비상태')
+         , c.ams_status as ds03_ams_status @(title : 'AMS상태')
+         , c.rgst_type @(title : '등록유형')
+         , c.install_stdt @(title : '설치시작일')
+         , c.install_schd_eddt @(title : '설치예정시작일')
+         , c.install_eddt @(title : '설치종료일')
+         , c.dmsh_stdt @(title : '철거시작일')
+         , c.dmsh_schd_eddt @(title : '철거시작예정일')
+         , c.dmsh_eddt @(title : '철거종료일')
+         , c.asst_div @(title : '자산구분')
+         , c.use_org @(title : '사용부서')
+         , c.lfcycl_mng_org @(title : '생애관리부서')
+         , c.lfcycl_mngr @(title : '생애관리자')
+         , c.inout_div @(title : '사내외구분')
+         , c.district @(title : 'District')
+         , c.building @(title : 'Building')
+         , c.floor @(title : 'Floor')
+         , c.line @(title : 'Line')
+         , c.bay @(title : 'Bay')
+         , c.site @(title : 'Site')
+         , c.gbm @(title : '사업부')
+         , c.gain_dt @(title : '취득일자')
+         , d.eam_status @(title : 'EAM상태')
+         , d.ams_status as ds04_ams_status @(title : 'AMS상태')
+      from dsentity.DS01 as a
+      join dsentity.DS02 as b
+        on a.qcode = b.qcode
+      join dsentity.DS03 as c
+        on b.fclt_id = c.fclt_id
+      join dsentity.DS04 as d
+        on c.fclt_id = d.fclt_id
+    }
+
+select key b.fclt_id
          , b.qcode
          , a.cost1
          , a.curr1
@@ -137,8 +245,5 @@ service DSOdataService {
       join dsentity.DS03 as c
         on b.fclt_id = c.fclt_id
       join dsentity.DS04 as d
-        on c.fclt_id = d.fclt_id
-    }
-    ;
-/* Deatail Query */
-
+        on c.fclt_id = d.fclt_id    
+ */

@@ -39,5 +39,6 @@ VIEW DSOdataService_card_detail AS SELECT
   c_2.gbm,
   c_2.gain_dt,
   d_3.eam_status,
-  d_3.ams_status AS ds04_ams_status
+  d_3.ams_status AS ds04_ams_status,
+  CASE WHEN ((d_3.eam_status = '설치완료' OR d_3.eam_status = '철거요청') AND d_3.ams_status = '사용') OR ((d_3.eam_status = '미설치' OR d_3.eam_status = '설치요청' OR d_3.eam_status = '철거진행중') AND d_3.ams_status = '미사용') OR (d_3.eam_status = '폐기' AND d_3.ams_status = '철거완료') THEN 'N' ELSE 'Y' END AS issue_status
 FROM (((ds_api_cards_DS01 AS a_0 INNER JOIN ds_api_cards_DS02 AS b_1 ON a_0.qcode = b_1.qcode) INNER JOIN ds_api_cards_DS03 AS c_2 ON b_1.fclt_id = c_2.fclt_id) INNER JOIN ds_api_cards_DS04 AS d_3 ON c_2.fclt_id = d_3.fclt_id)

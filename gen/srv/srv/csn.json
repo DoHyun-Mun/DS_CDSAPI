@@ -250,6 +250,23 @@
         }
       }
     },
+    "ds.api.cards.DS06": {
+      "kind": "entity",
+      "elements": {
+        "seqId": {
+          "key": true,
+          "type": "cds.Integer"
+        },
+        "statusNm": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "titleNm": {
+          "type": "cds.String",
+          "length": 30
+        }
+      }
+    },
     "DSOdataService": {
       "@source": "srv/card-service.cds",
       "kind": "service"
@@ -535,6 +552,30 @@
         "sysalias_tgt": {
           "type": "cds.String",
           "length": 5
+        }
+      }
+    },
+    "DSOdataService.DS_06": {
+      "kind": "entity",
+      "projection": {
+        "from": {
+          "ref": [
+            "ds.api.cards.DS06"
+          ]
+        }
+      },
+      "elements": {
+        "seqId": {
+          "key": true,
+          "type": "cds.Integer"
+        },
+        "statusNm": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "titleNm": {
+          "type": "cds.String",
+          "length": 30
         }
       }
     },
@@ -1435,12 +1476,38 @@
               "cast": {
                 "type": "cds.Integer"
               }
+            },
+            {
+              "SELECT": {
+                "from": {
+                  "ref": [
+                    "ds.api.cards.DS04"
+                  ]
+                },
+                "columns": [
+                  {
+                    "func": "count",
+                    "args": [
+                      "*"
+                    ],
+                    "as": "tCnt"
+                  }
+                ]
+              },
+              "as": "totalCnt",
+              "cast": {
+                "type": "cds.Integer"
+              }
             }
           ]
         }
       },
       "elements": {
         "cnt": {
+          "@Core.Computed": true,
+          "type": "cds.Integer"
+        },
+        "totalCnt": {
           "@Core.Computed": true,
           "type": "cds.Integer"
         }
@@ -1536,6 +1603,7 @@
           },
           "columns": [
             {
+              "key": true,
               "ref": [
                 "b",
                 "fclt_id"
@@ -1778,162 +1846,347 @@
                 "ams_status"
               ],
               "as": "ds04_ams_status"
+            },
+            {
+              "xpr": [
+                "case",
+                "when",
+                {
+                  "xpr": [
+                    {
+                      "xpr": [
+                        {
+                          "ref": [
+                            "d",
+                            "eam_status"
+                          ]
+                        },
+                        "=",
+                        {
+                          "val": "설치완료"
+                        },
+                        "or",
+                        {
+                          "ref": [
+                            "d",
+                            "eam_status"
+                          ]
+                        },
+                        "=",
+                        {
+                          "val": "철거요청"
+                        }
+                      ]
+                    },
+                    "and",
+                    {
+                      "ref": [
+                        "d",
+                        "ams_status"
+                      ]
+                    },
+                    "=",
+                    {
+                      "val": "사용"
+                    }
+                  ]
+                },
+                "or",
+                {
+                  "xpr": [
+                    {
+                      "xpr": [
+                        {
+                          "ref": [
+                            "d",
+                            "eam_status"
+                          ]
+                        },
+                        "=",
+                        {
+                          "val": "미설치"
+                        },
+                        "or",
+                        {
+                          "ref": [
+                            "d",
+                            "eam_status"
+                          ]
+                        },
+                        "=",
+                        {
+                          "val": "설치요청"
+                        },
+                        "or",
+                        {
+                          "ref": [
+                            "d",
+                            "eam_status"
+                          ]
+                        },
+                        "=",
+                        {
+                          "val": "철거진행중"
+                        }
+                      ]
+                    },
+                    "and",
+                    {
+                      "ref": [
+                        "d",
+                        "ams_status"
+                      ]
+                    },
+                    "=",
+                    {
+                      "val": "미사용"
+                    }
+                  ]
+                },
+                "or",
+                {
+                  "xpr": [
+                    {
+                      "ref": [
+                        "d",
+                        "eam_status"
+                      ]
+                    },
+                    "=",
+                    {
+                      "val": "폐기"
+                    },
+                    "and",
+                    {
+                      "ref": [
+                        "d",
+                        "ams_status"
+                      ]
+                    },
+                    "=",
+                    {
+                      "val": "철거완료"
+                    }
+                  ]
+                },
+                "then",
+                {
+                  "val": "N"
+                },
+                "else",
+                {
+                  "val": "Y"
+                },
+                "end"
+              ],
+              "as": "issue_status",
+              "cast": {
+                "type": "cds.String",
+                "length": 1
+              }
             }
           ]
         }
       },
       "elements": {
         "fclt_id": {
+          "@title": "설비ID",
+          "key": true,
           "type": "cds.String",
           "length": 6
         },
         "qcode": {
+          "@title": "Q코드",
           "type": "cds.String",
           "length": 5
         },
         "cost1": {
+          "@title": "취득가",
           "type": "cds.Decimal",
           "precision": 15,
           "scale": 10
         },
         "curr1": {
+          "@title": "취득가단위",
           "type": "cds.String",
           "length": 3
         },
         "cost2": {
+          "@title": "장부가",
           "type": "cds.Integer64"
         },
         "curr2": {
+          "@title": "장부가단위",
           "type": "cds.String",
           "length": 3
         },
         "date1": {
+          "@title": "App일자",
           "type": "cds.Date"
         },
         "asst_no": {
+          "@title": "자산번호",
           "type": "cds.String",
           "length": 5
         },
         "asst_type1": {
+          "@title": "자산유형0",
           "type": "cds.String",
           "length": 10
         },
         "asst_type2": {
+          "@title": "자산유형1",
           "type": "cds.String",
           "length": 10
         },
         "ds02_mst_code": {
+          "@title": "마스터코드",
           "type": "cds.String",
           "length": 3
         },
         "asst_status": {
+          "@title": "자산상태",
           "type": "cds.String",
           "length": 10
         },
         "fclt_area": {
+          "@title": "설비Area",
           "type": "cds.String",
           "length": 3
         },
         "model": {
+          "@title": "Model",
           "type": "cds.String",
           "length": 2
         },
         "serial_no": {
+          "@title": "시리얼번호",
           "type": "cds.String",
           "length": 5
         },
         "ds03_mst_code": {
+          "@title": "마스터코드",
           "type": "cds.String",
           "length": 3
         },
         "fclt_status": {
+          "@title": "설비상태",
           "type": "cds.String",
           "length": 6
         },
         "ds03_ams_status": {
+          "@title": "AMS상태",
           "type": "cds.String",
           "length": 6
         },
         "rgst_type": {
+          "@title": "등록유형",
           "type": "cds.String",
           "length": 10
         },
         "install_stdt": {
+          "@title": "설치시작일",
           "type": "cds.Date"
         },
         "install_schd_eddt": {
+          "@title": "설치예정시작일",
           "type": "cds.Date"
         },
         "install_eddt": {
+          "@title": "설치종료일",
           "type": "cds.Date"
         },
         "dmsh_stdt": {
+          "@title": "철거시작일",
           "type": "cds.Date"
         },
         "dmsh_schd_eddt": {
+          "@title": "철거시작예정일",
           "type": "cds.Date"
         },
         "dmsh_eddt": {
+          "@title": "철거종료일",
           "type": "cds.Date"
         },
         "asst_div": {
+          "@title": "자산구분",
           "type": "cds.String",
           "length": 5
         },
         "use_org": {
+          "@title": "사용부서",
           "type": "cds.String",
           "length": 20
         },
         "lfcycl_mng_org": {
+          "@title": "생애관리부서",
           "type": "cds.String",
           "length": 20
         },
         "lfcycl_mngr": {
+          "@title": "생애관리자",
           "type": "cds.String",
           "length": 10
         },
         "inout_div": {
+          "@title": "사내외구분",
           "type": "cds.String",
           "length": 8
         },
         "district": {
+          "@title": "District",
           "type": "cds.String",
           "length": 12
         },
         "building": {
+          "@title": "Building",
           "type": "cds.String",
           "length": 20
         },
         "floor": {
+          "@title": "Floor",
           "type": "cds.String",
           "length": 3
         },
         "line": {
+          "@title": "Line",
           "type": "cds.String",
           "length": 3
         },
         "bay": {
+          "@title": "Bay",
           "type": "cds.String",
           "length": 3
         },
         "site": {
+          "@title": "Site",
           "type": "cds.String",
           "length": 3
         },
         "gbm": {
+          "@title": "사업부",
           "type": "cds.String",
           "length": 10
         },
         "gain_dt": {
+          "@title": "취득일자",
           "type": "cds.Date"
         },
         "eam_status": {
+          "@title": "EAM상태",
           "type": "cds.String",
           "length": 10
         },
         "ds04_ams_status": {
+          "@title": "AMS상태",
           "type": "cds.String",
           "length": 6
+        },
+        "issue_status": {
+          "@title": "상태이상",
+          "@Core.Computed": true,
+          "type": "cds.String",
+          "length": 1
         }
       }
     }

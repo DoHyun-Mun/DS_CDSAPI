@@ -142,3 +142,9 @@ entity DS05 {
     sysalias_tgt : String(5);
 }
 
+entity DS06 {
+    key seqId : Integer;
+    statusNm : String(20);
+    titleNm : String(30);
+}
+
