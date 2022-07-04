@@ -7,11 +7,13 @@ service DSOdataService {
     entity DS_04 as projection on dsentity.DS04;
     entity DS_05 as projection on dsentity.DS05;
     entity DS_06 as projection on dsentity.DS06;
+    entity DS_03_Performance as projection on dsentity.DS03_Performance;
 
     entity card01 as 
     select a.asst_type2 /* 자산유형1 */
-         , sum(b.cost1) as cost1 : Integer64 /* 취득가 */
-         , sum(b.cost2) as cost2 : Integer64 /* 장부가 */
+         , round(sum(b.cost1) / 1000 , 1) AS cost1 : Integer64 /* 취득가 */
+	     , round(case when a.asst_type2 = 'Infra' then (sum(b.cost2) * 100 ) / 10000000000
+	            else sum(b.cost2) / 10000000000 end , 1) as cost2  : Integer64 /* 장부가 */
          , count(*) as cnt : Integer
       from dsentity.DS02 as a
       join dsentity.DS01 as b on a.qcode = b.qcode

@@ -257,13 +257,81 @@
           "key": true,
           "type": "cds.Integer"
         },
-        "statusNm": {
-          "type": "cds.String",
-          "length": 20
-        },
-        "titleNm": {
+        "activityId": {
           "type": "cds.String",
           "length": 30
+        },
+        "claimedAt": {
+          "type": "cds.String",
+          "length": 30
+        },
+        "completedAt": {
+          "type": "cds.String",
+          "length": 30
+        },
+        "createdAt": {
+          "type": "cds.String",
+          "length": 30
+        },
+        "description": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "id": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "processor": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "recipientUsers": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "recipientGroups": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "status": {
+          "type": "cds.String",
+          "length": 30
+        },
+        "subject": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "workflowDefinitionId": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "workflowInstanceId": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "priority": {
+          "type": "cds.String",
+          "length": 30
+        },
+        "dueDate": {
+          "type": "cds.String",
+          "length": 30
+        },
+        "createdBy": {
+          "type": "cds.String",
+          "length": 30
+        },
+        "definitionId": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "lastChangedAt": {
+          "type": "cds.String",
+          "length": 30
+        },
+        "applicationScope": {
+          "type": "cds.String",
+          "length": 10
         }
       }
     },
@@ -569,13 +637,81 @@
           "key": true,
           "type": "cds.Integer"
         },
-        "statusNm": {
-          "type": "cds.String",
-          "length": 20
-        },
-        "titleNm": {
+        "activityId": {
           "type": "cds.String",
           "length": 30
+        },
+        "claimedAt": {
+          "type": "cds.String",
+          "length": 30
+        },
+        "completedAt": {
+          "type": "cds.String",
+          "length": 30
+        },
+        "createdAt": {
+          "type": "cds.String",
+          "length": 30
+        },
+        "description": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "id": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "processor": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "recipientUsers": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "recipientGroups": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "status": {
+          "type": "cds.String",
+          "length": 30
+        },
+        "subject": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "workflowDefinitionId": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "workflowInstanceId": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "priority": {
+          "type": "cds.String",
+          "length": 30
+        },
+        "dueDate": {
+          "type": "cds.String",
+          "length": 30
+        },
+        "createdBy": {
+          "type": "cds.String",
+          "length": 30
+        },
+        "definitionId": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "lastChangedAt": {
+          "type": "cds.String",
+          "length": 30
+        },
+        "applicationScope": {
+          "type": "cds.String",
+          "length": 10
         }
       }
     },
@@ -623,13 +759,29 @@
               ]
             },
             {
-              "func": "sum",
+              "func": "round",
               "args": [
                 {
-                  "ref": [
-                    "b",
-                    "cost1"
+                  "xpr": [
+                    {
+                      "func": "sum",
+                      "args": [
+                        {
+                          "ref": [
+                            "b",
+                            "cost1"
+                          ]
+                        }
+                      ]
+                    },
+                    "/",
+                    {
+                      "val": 1000
+                    }
                   ]
+                },
+                {
+                  "val": 1
                 }
               ],
               "as": "cost1",
@@ -638,13 +790,67 @@
               }
             },
             {
-              "func": "sum",
+              "func": "round",
               "args": [
                 {
-                  "ref": [
-                    "b",
-                    "cost2"
+                  "xpr": [
+                    "case",
+                    "when",
+                    {
+                      "ref": [
+                        "a",
+                        "asst_type2"
+                      ]
+                    },
+                    "=",
+                    {
+                      "val": "Infra"
+                    },
+                    "then",
+                    {
+                      "xpr": [
+                        {
+                          "func": "sum",
+                          "args": [
+                            {
+                              "ref": [
+                                "b",
+                                "cost2"
+                              ]
+                            }
+                          ]
+                        },
+                        "*",
+                        {
+                          "val": 100
+                        }
+                      ]
+                    },
+                    "/",
+                    {
+                      "val": 10000000000
+                    },
+                    "else",
+                    {
+                      "func": "sum",
+                      "args": [
+                        {
+                          "ref": [
+                            "b",
+                            "cost2"
+                          ]
+                        }
+                      ]
+                    },
+                    "/",
+                    {
+                      "val": 10000000000
+                    },
+                    "end"
                   ]
+                },
+                {
+                  "val": 1
                 }
               ],
               "as": "cost2",
