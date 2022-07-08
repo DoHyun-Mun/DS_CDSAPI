@@ -70,6 +70,35 @@ service DSOdataService {
         on b.fclt_id = c.fclt_id  
     ;
 
+    entity card02_01_Performance as
+    select a.line_1
+         , round((avg(days_between(a.install_stdt_1, a.install_schd_eddt_1))),1) as line_lt_days : Decimal(10,10)
+      from dsentity.DS03_Performance as a
+     group by a.line_1
+    ;
+
+    entity card03_Performance as
+    select distinct a.fclt_id
+         , a.asst_type1
+         , a.asst_type2
+         , a.asst_status
+         , a.fclt_area
+         , a.model
+         , b.use_org_1
+         , b.lfcycl_mng_org_1
+         , b.building_1
+         , b.line_1
+         , b.floor_1
+         , c.eam_status
+         , days_between(b.install_stdt_1, b.install_schd_eddt_1) as end_days : Integer
+         , days_between(b.install_stdt_1, CURRENT_DATE) as current_days : Integer
+         , round((days_between(b.install_stdt_1, CURRENT_DATE) / days_between(b.install_stdt_1, b.install_schd_eddt_1)) * 100,1) as current_rate : Decimal(3,2)
+      from dsentity.DS02 as a
+      join dsentity.DS03_Performance as b
+        on a.fclt_id = b.fclt_id_1
+      join dsentity.DS04 as c
+        on b.fclt_id_1 = c.fclt_id  
+    ;    
     entity card04 as
     /*
     AMS 상태 = 사용 

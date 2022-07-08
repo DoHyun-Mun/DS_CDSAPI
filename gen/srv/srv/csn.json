@@ -335,6 +335,759 @@
         }
       }
     },
+    "ds.api.cards.DS03_Performance": {
+      "kind": "entity",
+      "elements": {
+        "seqNo": {
+          "key": true,
+          "type": "cds.Integer"
+        },
+        "fclt_id_1": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "mst_code_1": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "qcode_1": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "fclt_status_1": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "ams_status_1": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "rgst_type_1": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "install_stdt_1": {
+          "type": "cds.Date"
+        },
+        "install_schd_eddt_1": {
+          "type": "cds.Date"
+        },
+        "install_eddt_1": {
+          "type": "cds.Date"
+        },
+        "dmsh_stdt_1": {
+          "type": "cds.Date"
+        },
+        "dmsh_schd_eddt_1": {
+          "type": "cds.Date"
+        },
+        "dmsh_eddt_1": {
+          "type": "cds.Date"
+        },
+        "asst_div_1": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "use_org_1": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "lfcycl_mng_org_1": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "lfcycl_mngr_1": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "inout_div_1": {
+          "type": "cds.String",
+          "length": 8
+        },
+        "district_1": {
+          "type": "cds.String",
+          "length": 12
+        },
+        "building_1": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "floor_1": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "line_1": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "bay_1": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "site_1": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "gbm_1": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "gain_dt_1": {
+          "type": "cds.Date"
+        },
+        "fclt_id_2": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "mst_code_2": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "qcode_2": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "fclt_status_2": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "ams_status_2": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "rgst_type_2": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "install_stdt_2": {
+          "type": "cds.Date"
+        },
+        "install_schd_eddt_2": {
+          "type": "cds.Date"
+        },
+        "install_eddt_2": {
+          "type": "cds.Date"
+        },
+        "dmsh_stdt_2": {
+          "type": "cds.Date"
+        },
+        "dmsh_schd_eddt_2": {
+          "type": "cds.Date"
+        },
+        "dmsh_eddt_2": {
+          "type": "cds.Date"
+        },
+        "asst_div_2": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "use_org_2": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "lfcycl_mng_org_2": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "lfcycl_mngr_2": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "inout_div_2": {
+          "type": "cds.String",
+          "length": 8
+        },
+        "district_2": {
+          "type": "cds.String",
+          "length": 12
+        },
+        "building_2": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "floor_2": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "line_2": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "bay_2": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "site_2": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "gbm_2": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "gain_dt_2": {
+          "type": "cds.Date"
+        },
+        "fclt_id_3": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "mst_code_3": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "qcode_3": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "fclt_status_3": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "ams_status_3": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "rgst_type_3": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "install_stdt_3": {
+          "type": "cds.Date"
+        },
+        "install_schd_eddt_3": {
+          "type": "cds.Date"
+        },
+        "install_eddt_3": {
+          "type": "cds.Date"
+        },
+        "dmsh_stdt_3": {
+          "type": "cds.Date"
+        },
+        "dmsh_schd_eddt_3": {
+          "type": "cds.Date"
+        },
+        "dmsh_eddt_3": {
+          "type": "cds.Date"
+        },
+        "asst_div_3": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "use_org_3": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "lfcycl_mng_org_3": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "lfcycl_mngr_3": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "inout_div_3": {
+          "type": "cds.String",
+          "length": 8
+        },
+        "district_3": {
+          "type": "cds.String",
+          "length": 12
+        },
+        "building_3": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "floor_3": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "line_3": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "bay_3": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "site_3": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "gbm_3": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "gain_dt_3": {
+          "type": "cds.Date"
+        },
+        "fclt_id_4": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "mst_code_4": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "qcode_4": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "fclt_status_4": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "ams_status_4": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "rgst_type_4": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "install_stdt_4": {
+          "type": "cds.Date"
+        },
+        "install_schd_eddt_4": {
+          "type": "cds.Date"
+        },
+        "install_eddt_4": {
+          "type": "cds.Date"
+        },
+        "dmsh_stdt_4": {
+          "type": "cds.Date"
+        },
+        "dmsh_schd_eddt_4": {
+          "type": "cds.Date"
+        },
+        "dmsh_eddt_4": {
+          "type": "cds.Date"
+        },
+        "asst_div_4": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "use_org_4": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "lfcycl_mng_org_4": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "lfcycl_mngr_4": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "inout_div_4": {
+          "type": "cds.String",
+          "length": 8
+        },
+        "district_4": {
+          "type": "cds.String",
+          "length": 12
+        },
+        "building_4": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "floor_4": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "line_4": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "bay_4": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "site_4": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "gbm_4": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "gain_dt_4": {
+          "type": "cds.Date"
+        },
+        "fclt_id_5": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "mst_code_5": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "qcode_5": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "fclt_status_5": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "ams_status_5": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "rgst_type_5": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "install_stdt_5": {
+          "type": "cds.Date"
+        },
+        "install_schd_eddt_5": {
+          "type": "cds.Date"
+        },
+        "install_eddt_5": {
+          "type": "cds.Date"
+        },
+        "dmsh_stdt_5": {
+          "type": "cds.Date"
+        },
+        "dmsh_schd_eddt_5": {
+          "type": "cds.Date"
+        },
+        "dmsh_eddt_5": {
+          "type": "cds.Date"
+        },
+        "asst_div_5": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "use_org_5": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "lfcycl_mng_org_5": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "lfcycl_mngr_5": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "inout_div_5": {
+          "type": "cds.String",
+          "length": 8
+        },
+        "district_5": {
+          "type": "cds.String",
+          "length": 12
+        },
+        "building_5": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "floor_5": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "line_5": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "bay_5": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "site_5": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "gbm_5": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "gain_dt_5": {
+          "type": "cds.Date"
+        },
+        "fclt_id_6": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "mst_code_6": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "qcode_6": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "fclt_status_6": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "ams_status_6": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "rgst_type_6": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "install_stdt_6": {
+          "type": "cds.Date"
+        },
+        "install_schd_eddt_6": {
+          "type": "cds.Date"
+        },
+        "install_eddt_6": {
+          "type": "cds.Date"
+        },
+        "dmsh_stdt_6": {
+          "type": "cds.Date"
+        },
+        "dmsh_schd_eddt_6": {
+          "type": "cds.Date"
+        },
+        "dmsh_eddt_6": {
+          "type": "cds.Date"
+        },
+        "asst_div_6": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "use_org_6": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "lfcycl_mng_org_6": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "lfcycl_mngr_6": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "inout_div_6": {
+          "type": "cds.String",
+          "length": 8
+        },
+        "district_6": {
+          "type": "cds.String",
+          "length": 12
+        },
+        "building_6": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "floor_6": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "line_6": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "bay_6": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "site_6": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "gbm_6": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "gain_dt_6": {
+          "type": "cds.Date"
+        },
+        "fclt_id_7": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "mst_code_7": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "qcode_7": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "fclt_status_7": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "ams_status_7": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "rgst_type_7": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "install_stdt_7": {
+          "type": "cds.Date"
+        },
+        "install_schd_eddt_7": {
+          "type": "cds.Date"
+        },
+        "install_eddt_7": {
+          "type": "cds.Date"
+        },
+        "dmsh_stdt_7": {
+          "type": "cds.Date"
+        },
+        "dmsh_schd_eddt_7": {
+          "type": "cds.Date"
+        },
+        "dmsh_eddt_7": {
+          "type": "cds.Date"
+        },
+        "asst_div_7": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "use_org_7": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "lfcycl_mng_org_7": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "lfcycl_mngr_7": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "inout_div_7": {
+          "type": "cds.String",
+          "length": 8
+        },
+        "district_7": {
+          "type": "cds.String",
+          "length": 12
+        },
+        "building_7": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "floor_7": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "line_7": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "bay_7": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "site_7": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "gbm_7": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "gain_dt_7": {
+          "type": "cds.Date"
+        },
+        "fclt_id_8": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "mst_code_8": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "qcode_8": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "fclt_status_8": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "ams_status_8": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "rgst_type_8": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "install_stdt_8": {
+          "type": "cds.Date"
+        },
+        "install_schd_eddt_8": {
+          "type": "cds.Date"
+        },
+        "install_eddt_8": {
+          "type": "cds.Date"
+        },
+        "dmsh_stdt_8": {
+          "type": "cds.Date"
+        },
+        "dmsh_schd_eddt_8": {
+          "type": "cds.Date"
+        },
+        "dmsh_eddt_8": {
+          "type": "cds.Date"
+        },
+        "asst_div_8": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "use_org_8": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "lfcycl_mng_org_8": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "lfcycl_mngr_8": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "inout_div_8": {
+          "type": "cds.String",
+          "length": 8
+        },
+        "district_8": {
+          "type": "cds.String",
+          "length": 12
+        },
+        "building_8": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "floor_8": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "line_8": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "bay_8": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "site_8": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "gbm_8": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "gain_dt_8": {
+          "type": "cds.Date"
+        }
+      }
+    },
     "DSOdataService": {
       "@source": "srv/card-service.cds",
       "kind": "service"
@@ -712,6 +1465,766 @@
         "applicationScope": {
           "type": "cds.String",
           "length": 10
+        }
+      }
+    },
+    "DSOdataService.DS_03_Performance": {
+      "kind": "entity",
+      "projection": {
+        "from": {
+          "ref": [
+            "ds.api.cards.DS03_Performance"
+          ]
+        }
+      },
+      "elements": {
+        "seqNo": {
+          "key": true,
+          "type": "cds.Integer"
+        },
+        "fclt_id_1": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "mst_code_1": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "qcode_1": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "fclt_status_1": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "ams_status_1": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "rgst_type_1": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "install_stdt_1": {
+          "type": "cds.Date"
+        },
+        "install_schd_eddt_1": {
+          "type": "cds.Date"
+        },
+        "install_eddt_1": {
+          "type": "cds.Date"
+        },
+        "dmsh_stdt_1": {
+          "type": "cds.Date"
+        },
+        "dmsh_schd_eddt_1": {
+          "type": "cds.Date"
+        },
+        "dmsh_eddt_1": {
+          "type": "cds.Date"
+        },
+        "asst_div_1": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "use_org_1": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "lfcycl_mng_org_1": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "lfcycl_mngr_1": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "inout_div_1": {
+          "type": "cds.String",
+          "length": 8
+        },
+        "district_1": {
+          "type": "cds.String",
+          "length": 12
+        },
+        "building_1": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "floor_1": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "line_1": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "bay_1": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "site_1": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "gbm_1": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "gain_dt_1": {
+          "type": "cds.Date"
+        },
+        "fclt_id_2": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "mst_code_2": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "qcode_2": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "fclt_status_2": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "ams_status_2": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "rgst_type_2": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "install_stdt_2": {
+          "type": "cds.Date"
+        },
+        "install_schd_eddt_2": {
+          "type": "cds.Date"
+        },
+        "install_eddt_2": {
+          "type": "cds.Date"
+        },
+        "dmsh_stdt_2": {
+          "type": "cds.Date"
+        },
+        "dmsh_schd_eddt_2": {
+          "type": "cds.Date"
+        },
+        "dmsh_eddt_2": {
+          "type": "cds.Date"
+        },
+        "asst_div_2": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "use_org_2": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "lfcycl_mng_org_2": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "lfcycl_mngr_2": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "inout_div_2": {
+          "type": "cds.String",
+          "length": 8
+        },
+        "district_2": {
+          "type": "cds.String",
+          "length": 12
+        },
+        "building_2": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "floor_2": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "line_2": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "bay_2": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "site_2": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "gbm_2": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "gain_dt_2": {
+          "type": "cds.Date"
+        },
+        "fclt_id_3": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "mst_code_3": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "qcode_3": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "fclt_status_3": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "ams_status_3": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "rgst_type_3": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "install_stdt_3": {
+          "type": "cds.Date"
+        },
+        "install_schd_eddt_3": {
+          "type": "cds.Date"
+        },
+        "install_eddt_3": {
+          "type": "cds.Date"
+        },
+        "dmsh_stdt_3": {
+          "type": "cds.Date"
+        },
+        "dmsh_schd_eddt_3": {
+          "type": "cds.Date"
+        },
+        "dmsh_eddt_3": {
+          "type": "cds.Date"
+        },
+        "asst_div_3": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "use_org_3": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "lfcycl_mng_org_3": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "lfcycl_mngr_3": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "inout_div_3": {
+          "type": "cds.String",
+          "length": 8
+        },
+        "district_3": {
+          "type": "cds.String",
+          "length": 12
+        },
+        "building_3": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "floor_3": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "line_3": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "bay_3": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "site_3": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "gbm_3": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "gain_dt_3": {
+          "type": "cds.Date"
+        },
+        "fclt_id_4": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "mst_code_4": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "qcode_4": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "fclt_status_4": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "ams_status_4": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "rgst_type_4": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "install_stdt_4": {
+          "type": "cds.Date"
+        },
+        "install_schd_eddt_4": {
+          "type": "cds.Date"
+        },
+        "install_eddt_4": {
+          "type": "cds.Date"
+        },
+        "dmsh_stdt_4": {
+          "type": "cds.Date"
+        },
+        "dmsh_schd_eddt_4": {
+          "type": "cds.Date"
+        },
+        "dmsh_eddt_4": {
+          "type": "cds.Date"
+        },
+        "asst_div_4": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "use_org_4": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "lfcycl_mng_org_4": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "lfcycl_mngr_4": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "inout_div_4": {
+          "type": "cds.String",
+          "length": 8
+        },
+        "district_4": {
+          "type": "cds.String",
+          "length": 12
+        },
+        "building_4": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "floor_4": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "line_4": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "bay_4": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "site_4": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "gbm_4": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "gain_dt_4": {
+          "type": "cds.Date"
+        },
+        "fclt_id_5": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "mst_code_5": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "qcode_5": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "fclt_status_5": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "ams_status_5": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "rgst_type_5": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "install_stdt_5": {
+          "type": "cds.Date"
+        },
+        "install_schd_eddt_5": {
+          "type": "cds.Date"
+        },
+        "install_eddt_5": {
+          "type": "cds.Date"
+        },
+        "dmsh_stdt_5": {
+          "type": "cds.Date"
+        },
+        "dmsh_schd_eddt_5": {
+          "type": "cds.Date"
+        },
+        "dmsh_eddt_5": {
+          "type": "cds.Date"
+        },
+        "asst_div_5": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "use_org_5": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "lfcycl_mng_org_5": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "lfcycl_mngr_5": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "inout_div_5": {
+          "type": "cds.String",
+          "length": 8
+        },
+        "district_5": {
+          "type": "cds.String",
+          "length": 12
+        },
+        "building_5": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "floor_5": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "line_5": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "bay_5": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "site_5": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "gbm_5": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "gain_dt_5": {
+          "type": "cds.Date"
+        },
+        "fclt_id_6": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "mst_code_6": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "qcode_6": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "fclt_status_6": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "ams_status_6": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "rgst_type_6": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "install_stdt_6": {
+          "type": "cds.Date"
+        },
+        "install_schd_eddt_6": {
+          "type": "cds.Date"
+        },
+        "install_eddt_6": {
+          "type": "cds.Date"
+        },
+        "dmsh_stdt_6": {
+          "type": "cds.Date"
+        },
+        "dmsh_schd_eddt_6": {
+          "type": "cds.Date"
+        },
+        "dmsh_eddt_6": {
+          "type": "cds.Date"
+        },
+        "asst_div_6": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "use_org_6": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "lfcycl_mng_org_6": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "lfcycl_mngr_6": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "inout_div_6": {
+          "type": "cds.String",
+          "length": 8
+        },
+        "district_6": {
+          "type": "cds.String",
+          "length": 12
+        },
+        "building_6": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "floor_6": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "line_6": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "bay_6": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "site_6": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "gbm_6": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "gain_dt_6": {
+          "type": "cds.Date"
+        },
+        "fclt_id_7": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "mst_code_7": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "qcode_7": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "fclt_status_7": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "ams_status_7": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "rgst_type_7": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "install_stdt_7": {
+          "type": "cds.Date"
+        },
+        "install_schd_eddt_7": {
+          "type": "cds.Date"
+        },
+        "install_eddt_7": {
+          "type": "cds.Date"
+        },
+        "dmsh_stdt_7": {
+          "type": "cds.Date"
+        },
+        "dmsh_schd_eddt_7": {
+          "type": "cds.Date"
+        },
+        "dmsh_eddt_7": {
+          "type": "cds.Date"
+        },
+        "asst_div_7": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "use_org_7": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "lfcycl_mng_org_7": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "lfcycl_mngr_7": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "inout_div_7": {
+          "type": "cds.String",
+          "length": 8
+        },
+        "district_7": {
+          "type": "cds.String",
+          "length": 12
+        },
+        "building_7": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "floor_7": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "line_7": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "bay_7": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "site_7": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "gbm_7": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "gain_dt_7": {
+          "type": "cds.Date"
+        },
+        "fclt_id_8": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "mst_code_8": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "qcode_8": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "fclt_status_8": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "ams_status_8": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "rgst_type_8": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "install_stdt_8": {
+          "type": "cds.Date"
+        },
+        "install_schd_eddt_8": {
+          "type": "cds.Date"
+        },
+        "install_eddt_8": {
+          "type": "cds.Date"
+        },
+        "dmsh_stdt_8": {
+          "type": "cds.Date"
+        },
+        "dmsh_schd_eddt_8": {
+          "type": "cds.Date"
+        },
+        "dmsh_eddt_8": {
+          "type": "cds.Date"
+        },
+        "asst_div_8": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "use_org_8": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "lfcycl_mng_org_8": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "lfcycl_mngr_8": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "inout_div_8": {
+          "type": "cds.String",
+          "length": 8
+        },
+        "district_8": {
+          "type": "cds.String",
+          "length": 12
+        },
+        "building_8": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "floor_8": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "line_8": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "bay_8": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "site_8": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "gbm_8": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "gain_dt_8": {
+          "type": "cds.Date"
         }
       }
     },
@@ -1483,6 +2996,384 @@
           "length": 3
         },
         "floor": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "eam_status": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "end_days": {
+          "@Core.Computed": true,
+          "type": "cds.Integer"
+        },
+        "current_days": {
+          "@Core.Computed": true,
+          "type": "cds.Integer"
+        },
+        "current_rate": {
+          "@Core.Computed": true,
+          "type": "cds.Decimal",
+          "precision": 3,
+          "scale": 2
+        }
+      }
+    },
+    "DSOdataService.card02_01_Performance": {
+      "kind": "entity",
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "ds.api.cards.DS03_Performance"
+            ],
+            "as": "a"
+          },
+          "columns": [
+            {
+              "ref": [
+                "a",
+                "line_1"
+              ]
+            },
+            {
+              "func": "round",
+              "args": [
+                {
+                  "func": "avg",
+                  "args": [
+                    {
+                      "func": "days_between",
+                      "args": [
+                        {
+                          "ref": [
+                            "a",
+                            "install_stdt_1"
+                          ]
+                        },
+                        {
+                          "ref": [
+                            "a",
+                            "install_schd_eddt_1"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "val": 1
+                }
+              ],
+              "as": "line_lt_days",
+              "cast": {
+                "type": "cds.Decimal",
+                "precision": 10,
+                "scale": 10
+              }
+            }
+          ],
+          "groupBy": [
+            {
+              "ref": [
+                "a",
+                "line_1"
+              ]
+            }
+          ]
+        }
+      },
+      "elements": {
+        "line_1": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "line_lt_days": {
+          "@Core.Computed": true,
+          "type": "cds.Decimal",
+          "precision": 10,
+          "scale": 10
+        }
+      }
+    },
+    "DSOdataService.card03_Performance": {
+      "kind": "entity",
+      "query": {
+        "SELECT": {
+          "from": {
+            "join": "inner",
+            "args": [
+              {
+                "join": "inner",
+                "args": [
+                  {
+                    "ref": [
+                      "ds.api.cards.DS02"
+                    ],
+                    "as": "a"
+                  },
+                  {
+                    "ref": [
+                      "ds.api.cards.DS03_Performance"
+                    ],
+                    "as": "b"
+                  }
+                ],
+                "on": [
+                  {
+                    "ref": [
+                      "a",
+                      "fclt_id"
+                    ]
+                  },
+                  "=",
+                  {
+                    "ref": [
+                      "b",
+                      "fclt_id_1"
+                    ]
+                  }
+                ]
+              },
+              {
+                "ref": [
+                  "ds.api.cards.DS04"
+                ],
+                "as": "c"
+              }
+            ],
+            "on": [
+              {
+                "ref": [
+                  "b",
+                  "fclt_id_1"
+                ]
+              },
+              "=",
+              {
+                "ref": [
+                  "c",
+                  "fclt_id"
+                ]
+              }
+            ]
+          },
+          "distinct": true,
+          "columns": [
+            {
+              "ref": [
+                "a",
+                "fclt_id"
+              ]
+            },
+            {
+              "ref": [
+                "a",
+                "asst_type1"
+              ]
+            },
+            {
+              "ref": [
+                "a",
+                "asst_type2"
+              ]
+            },
+            {
+              "ref": [
+                "a",
+                "asst_status"
+              ]
+            },
+            {
+              "ref": [
+                "a",
+                "fclt_area"
+              ]
+            },
+            {
+              "ref": [
+                "a",
+                "model"
+              ]
+            },
+            {
+              "ref": [
+                "b",
+                "use_org_1"
+              ]
+            },
+            {
+              "ref": [
+                "b",
+                "lfcycl_mng_org_1"
+              ]
+            },
+            {
+              "ref": [
+                "b",
+                "building_1"
+              ]
+            },
+            {
+              "ref": [
+                "b",
+                "line_1"
+              ]
+            },
+            {
+              "ref": [
+                "b",
+                "floor_1"
+              ]
+            },
+            {
+              "ref": [
+                "c",
+                "eam_status"
+              ]
+            },
+            {
+              "func": "days_between",
+              "args": [
+                {
+                  "ref": [
+                    "b",
+                    "install_stdt_1"
+                  ]
+                },
+                {
+                  "ref": [
+                    "b",
+                    "install_schd_eddt_1"
+                  ]
+                }
+              ],
+              "as": "end_days",
+              "cast": {
+                "type": "cds.Integer"
+              }
+            },
+            {
+              "func": "days_between",
+              "args": [
+                {
+                  "ref": [
+                    "b",
+                    "install_stdt_1"
+                  ]
+                },
+                {
+                  "func": "CURRENT_DATE"
+                }
+              ],
+              "as": "current_days",
+              "cast": {
+                "type": "cds.Integer"
+              }
+            },
+            {
+              "func": "round",
+              "args": [
+                {
+                  "xpr": [
+                    {
+                      "xpr": [
+                        {
+                          "func": "days_between",
+                          "args": [
+                            {
+                              "ref": [
+                                "b",
+                                "install_stdt_1"
+                              ]
+                            },
+                            {
+                              "func": "CURRENT_DATE"
+                            }
+                          ]
+                        },
+                        "/",
+                        {
+                          "func": "days_between",
+                          "args": [
+                            {
+                              "ref": [
+                                "b",
+                                "install_stdt_1"
+                              ]
+                            },
+                            {
+                              "ref": [
+                                "b",
+                                "install_schd_eddt_1"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    "*",
+                    {
+                      "val": 100
+                    }
+                  ]
+                },
+                {
+                  "val": 1
+                }
+              ],
+              "as": "current_rate",
+              "cast": {
+                "type": "cds.Decimal",
+                "precision": 3,
+                "scale": 2
+              }
+            }
+          ]
+        }
+      },
+      "elements": {
+        "fclt_id": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "asst_type1": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "asst_type2": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "asst_status": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "fclt_area": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "model": {
+          "type": "cds.String",
+          "length": 2
+        },
+        "use_org_1": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "lfcycl_mng_org_1": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "building_1": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "line_1": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "floor_1": {
           "type": "cds.String",
           "length": 3
         },
