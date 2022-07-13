@@ -26,6 +26,7 @@ modules:
           srv-url: ${default-url}
     requires:
       - name: DSWorkzoneCDS-db
+      - name: DSWorkzoneCDS-xsuaa
 
   - name: DSWorkzoneCDS-db-deployer
     type: hdb
@@ -43,3 +44,11 @@ resources:
       service-plan: hdi-shared
     properties:
       hdi-service-name: ${service-name}
+
+  - name: DSWorkzoneCDS-xsuaa
+    type: org.cloudfoundry.managed-service
+    parameters:
+      path: ./xs-security.json
+      service: xsuaa
+      service-name: DSWorkzoneCDS-xsuaa-srv
+      service-plan: application 
